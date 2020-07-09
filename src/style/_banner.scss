@@ -1,0 +1,33 @@
+$shadowColor: #000;
+$genreColor: rgb(180, 179, 180);
+
+.banner {
+  position: relative;
+  color: $whiteHeader;
+
+  .header {
+    position: absolute;
+    top: 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  .movie-details {
+    position: absolute;
+    bottom: 2rem;
+
+    & > span {
+      color: $genreColor;
+      margin-right: 1rem;
+      font-size: 14px;
+    }
+
+    button.btn-outline-white {
+      color: $whiteHeader;
+      border-color: $whiteHeader;
+    }
+  }
+}

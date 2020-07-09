@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  .navbar-light {
+    .navbar-brand {
+      color: $whiteHeader;
+      filter: drop-shadow(2px 3px 3px $shadowColor);
+    }
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .btn-link {
+    color: $whiteHeader;
+  }
+}
