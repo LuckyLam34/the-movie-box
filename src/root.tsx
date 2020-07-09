@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Header } from './containers/Header';
+import { Header } from './containers/Header/Header';
 import { A } from './components/a';
 import { B } from './components/b';
 
