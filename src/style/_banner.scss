@@ -10,6 +10,12 @@ $genreColor: rgb(180, 179, 180);
     top: 0;
   }
 
+  .rating {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+  }
+
   .carousel-control-prev,
   .carousel-control-next {
     display: none;

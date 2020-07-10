@@ -60,7 +60,7 @@ export class Banner extends React.Component<any, any> {
           ))}
         </Carousel>
         <Header />
-        <Rating />
+        <Rating ratingPoint="1" />
       </div>
     );
   }
