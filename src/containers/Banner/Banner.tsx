@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Header } from '../../components/Header';
 import { MovieDetails } from '../../components/MovieDetails';
+import { Rating } from '../../components/Rating';
 
 export class Banner extends React.Component<any, any> {
   constructor(props: any) {
@@ -17,16 +18,24 @@ export class Banner extends React.Component<any, any> {
           duration: '1h 52m',
           rating: 3,
         },
-        // {
-        //   src: 'img2.jpg',
-        //   alt: 'Fast & Furious banner',
-        //   id: 2,
-        // },
-        // {
-        //   src: 'img3.jpg',
-        //   alt: 'Transformers banner',
-        //   id: 3,
-        // },
+        {
+          id: 2,
+          title: 'Fast & Furious',
+          alt: 'Fast & Furious banner',
+          src: 'img2.jpg',
+          genres: ['Action', 'Thriller'],
+          duration: '1h 47m',
+          rating: 4,
+        },
+        {
+          id: 3,
+          title: 'Transformers',
+          alt: 'Transformers banner',
+          src: 'img3.jpg',
+          genres: ['Action', 'Adventure', 'Sci-Fi'],
+          duration: '1h 47m',
+          rating: 4,
+        },
       ],
     };
   }
@@ -51,6 +60,7 @@ export class Banner extends React.Component<any, any> {
           ))}
         </Carousel>
         <Header />
+        <Rating />
       </div>
     );
   }

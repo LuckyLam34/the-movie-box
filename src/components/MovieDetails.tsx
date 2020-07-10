@@ -6,7 +6,7 @@ export const MovieDetails = ({ details }: any) => {
     <div className="movie-details">
       <h1 className="text-uppercase">{details.title}</h1>
       {details.genres.map((item: any) => (
-        <span>{item}</span>
+        <span key={item}>{item}</span>
       ))}{' '}
       |<span className="ml-3">{details.duration}</span>
       <br />

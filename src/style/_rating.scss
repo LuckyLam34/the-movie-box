@@ -1,0 +1,18 @@
+.rating {
+  img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .back-stars {
+    position: relative;
+
+    .front-stars {
+      position: absolute;
+      top: 5px;
+      left: 1px;
+      display: inline-flex;
+      overflow: hidden;
+    }
+  }
+}
