@@ -1,9 +1,29 @@
-.header {
+section.header {
   width: 100%;
   .navbar-light {
     .navbar-brand {
       color: $whiteHeader;
       filter: drop-shadow(2px 3px 3px $shadowColor);
+    }
+  }
+
+  form {
+    img {
+      width: 20px;
+    }
+
+    input,
+    input:focus {
+      background-color: transparent;
+      color: $whiteHeader;
+    }
+
+    .show {
+      display: inline;
+    }
+
+    .hide {
+      display: none;
     }
   }
 
