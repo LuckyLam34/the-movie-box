@@ -15,7 +15,6 @@ $backgroundColor: rgba(72, 72, 94, 0.3);
 
   section.box {
     & > span {
-      padding-top: 3px;
       color: $smallGreyTextColor;
       font-size: 14px;
     }
@@ -26,7 +25,7 @@ $backgroundColor: rgba(72, 72, 94, 0.3);
 
     .front-stars {
       position: absolute;
-      top: 3px;
+      top: 2px;
       left: 0px;
       display: inline-flex;
       overflow: hidden;

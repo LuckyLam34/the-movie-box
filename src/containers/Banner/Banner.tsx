@@ -27,6 +27,7 @@ export class Banner extends React.Component<any, any> {
         //   genres: ['Action', 'Thriller'],
         //   duration: '1h 47m',
         //   rating: 4,
+        //   numberOfReviews: 237,
         // },
         // {
         //   id: 3,
@@ -35,7 +36,8 @@ export class Banner extends React.Component<any, any> {
         //   src: 'img3.jpg',
         //   genres: ['Action', 'Adventure', 'Sci-Fi'],
         //   duration: '1h 47m',
-        //   rating: 4,
+        //   rating: 2.1,
+        //   numberOfReviews: 733,
         // },
       ],
     };
@@ -54,7 +56,7 @@ export class Banner extends React.Component<any, any> {
                 src={`/assets/images/${item.src}`}
                 alt={item.alt}
               />
-              <div className="details pb-3">
+              <div className="details pb-4">
                 <div className="container">
                   <MovieDetails details={item} />
                 </div>

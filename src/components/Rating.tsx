@@ -6,7 +6,7 @@ export const Rating = ({ ratingPoint, numberOfReviews }: any) => {
   return (
     <div className="rating p-3">
       <section className="box d-flex">
-        <h5 className="mr-2">Rating</h5>
+        <h6 className="mr-2">Rating</h6>
         <span>based on {numberOfReviews} reviews</span>
       </section>
       <div className="back-stars">
