@@ -10,10 +10,14 @@ $genreColor: rgb(180, 179, 180);
     top: 0;
   }
 
-  .rating {
-    position: absolute;
-    bottom: 2rem;
-    right: 0;
+  .carousel-item {
+    .details {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      transform: translateX(-50%);
+      left: 50%;
+    }
   }
 
   .carousel-control-prev,
@@ -22,18 +26,6 @@ $genreColor: rgb(180, 179, 180);
   }
 
   .movie-details {
-    position: absolute;
-    bottom: 2rem;
-
-    & > span {
-      color: $genreColor;
-      margin-right: 1rem;
-      font-size: 14px;
-    }
-
-    button.btn-outline-white {
-      color: $whiteHeader;
-      border-color: $whiteHeader;
-    }
+    position: relative;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Rating } from './Rating';
 
 export const MovieDetails = ({ details }: any) => {
   console.log(details);
@@ -22,6 +23,10 @@ export const MovieDetails = ({ details }: any) => {
       <button type="button" className="btn btn-link text-uppercase mt-3">
         + Add to wishlist
       </button>
+      <Rating
+        numberOfReviews={details.numberOfReviews}
+        ratingPoint={details.rating}
+      />
     </div>
   );
 };

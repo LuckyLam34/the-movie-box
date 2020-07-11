@@ -16,26 +16,27 @@ export class Banner extends React.Component<any, any> {
           src: 'img1.jpg',
           genres: ['Fantasy', 'Animation', 'Family'],
           duration: '1h 52m',
-          rating: 3,
+          rating: 3.4,
+          numberOfReviews: 237,
         },
-        {
-          id: 2,
-          title: 'Fast & Furious',
-          alt: 'Fast & Furious banner',
-          src: 'img2.jpg',
-          genres: ['Action', 'Thriller'],
-          duration: '1h 47m',
-          rating: 4,
-        },
-        {
-          id: 3,
-          title: 'Transformers',
-          alt: 'Transformers banner',
-          src: 'img3.jpg',
-          genres: ['Action', 'Adventure', 'Sci-Fi'],
-          duration: '1h 47m',
-          rating: 4,
-        },
+        // {
+        //   id: 2,
+        //   title: 'Fast & Furious',
+        //   alt: 'Fast & Furious banner',
+        //   src: 'img2.jpg',
+        //   genres: ['Action', 'Thriller'],
+        //   duration: '1h 47m',
+        //   rating: 4,
+        // },
+        // {
+        //   id: 3,
+        //   title: 'Transformers',
+        //   alt: 'Transformers banner',
+        //   src: 'img3.jpg',
+        //   genres: ['Action', 'Adventure', 'Sci-Fi'],
+        //   duration: '1h 47m',
+        //   rating: 4,
+        // },
       ],
     };
   }
@@ -53,14 +54,15 @@ export class Banner extends React.Component<any, any> {
                 src={`/assets/images/${item.src}`}
                 alt={item.alt}
               />
-              <div className="container">
-                <MovieDetails details={item} />
+              <div className="details pb-3">
+                <div className="container">
+                  <MovieDetails details={item} />
+                </div>
               </div>
             </Carousel.Item>
           ))}
         </Carousel>
         <Header />
-        <Rating ratingPoint="1" />
       </div>
     );
   }
