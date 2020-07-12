@@ -1,0 +1,30 @@
+$greyText: rgb(128, 128, 138);
+
+section.navbar {
+  ul.nav {
+    & > li > a,
+    .nav-link {
+      color: $greyText;
+      text-decoration: none;
+    }
+
+    & > li > a {
+      padding: 1rem;
+
+      &.active,
+      &:hover {
+        color: $primaryColor;
+        border-bottom: 1px solid $primaryColor;
+      }
+    }
+
+    .nav-link {
+      padding-top: 0;
+    }
+
+    & + hr {
+      margin-top: 6px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$greyText: rgb(189, 189, 198);
+$bottomText: rgb(64, 64, 93);
+
+section.movie-card-item {
+  max-width: 100%;
+  .card > div > img + span {
+    position: absolute;
+    z-index: 1;
+    bottom: 6px;
+    left: 9px;
+    color: $greyText;
+  }
+
+  .card-body {
+    position: relative;
+
+    h5 {
+      color: $bottomText;
+      font-size: 16px;
+      width: calc(100% - 45px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    span {
+      color: $greyText;
+      font-size: 14px;
+      padding-right: 2px;
+    }
+
+    .badge {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    .badge-primary {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background-color: transparent;
+    }
+  }
+}
