@@ -1,22 +1,20 @@
 import React from 'react';
 
-export const MovieCardItem = () => (
-  <section className="movie-card-item">
+export const MovieCardItem = ({ movie }: any) => (
+  <section className="movie-card-item my-3">
     <div className="card">
       <div className="position-relative">
         <img
-          src="/assets/images/bad-teacher.jpg"
+          src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
           className="card-img-top img-fluid"
           alt="bacd"
         />
-        <span>1997</span>
+        <span>{movie.release_date.slice(0, 4)}</span>
       </div>
       <div className="card-body p-3">
-        <h5 className="card-title mb-0">Bad Teacher Bad teacher bad teacher</h5>
-
-        <span>Action</span>
-        <span>Funny</span>
-        <span className="badge badge-primary">3.1</span>
+        <h5 className="card-title mb-0">{movie.title}</h5>
+        <span>{movie.genres.join(', ')}</span>
+        <span className="badge badge-genre">{movie.vote_average}</span>
       </div>
     </div>
   </section>

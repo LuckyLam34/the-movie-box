@@ -17,6 +17,11 @@ section.movie-card-item {
     h5 {
       color: $bottomText;
       font-size: 16px;
+    }
+
+    h5,
+    h5 + span {
+      display: block;
       width: calc(100% - 45px);
       white-space: nowrap;
       overflow: hidden;
@@ -35,10 +40,11 @@ section.movie-card-item {
       bottom: 20px;
     }
 
-    .badge-primary {
+    .badge-genre {
       color: $primaryColor;
       border: 1px solid $primaryColor;
       background-color: transparent;
+      min-width: 23px;
     }
   }
 }

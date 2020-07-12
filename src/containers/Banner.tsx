@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { Header } from '../../components/Header';
-import { MovieDetails } from '../../components/MovieDetails';
+import { Header } from '../components/Header';
+import { MovieDetails } from '../components/MovieDetails';
 
 export class Banner extends React.Component<any, any> {
   constructor(props: any) {
