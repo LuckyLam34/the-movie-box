@@ -1,3 +1,5 @@
+$inputBgColor: rgba(166, 166, 175, 0.5);
+
 section.header {
   width: 100%;
   .navbar-light {
@@ -14,7 +16,13 @@ section.header {
 
     input,
     input:focus {
-      background-color: transparent;
+      background-color: $inputBgColor;
+      color: $whiteHeader;
+    }
+
+    input[type='search']::placeholder,
+    :-ms-input-placeholder,
+    ::-ms-input-placeholder {
       color: $whiteHeader;
     }
 

@@ -21,6 +21,20 @@ $genreColor: rgb(180, 179, 180);
     }
   }
 
+  .carousel li {
+    height: 7px;
+    width: 26px;
+    border: 1px solid $whiteHeader;
+    border-radius: 2px;
+    background-color: $whiteHeader;
+    opacity: 1;
+
+    &.active {
+      border-color: $primaryColor;
+      background-color: $primaryColor;
+    }
+  }
+
   .carousel-control-prev,
   .carousel-control-next {
     display: none;
