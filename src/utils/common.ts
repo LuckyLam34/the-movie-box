@@ -13,7 +13,7 @@ export function mergeMovieGenre(moviesArr: any[] = [], genreObj: any) {
     let genres = movieItem.genre_ids;
 
     genres = genres.map((item: number) => {
-      return genreObj[item].name;
+      return genreObj[item] ? genreObj[item].name : '';
     });
 
     return Object.assign({}, movieItem, { genres });

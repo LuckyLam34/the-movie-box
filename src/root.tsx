@@ -5,21 +5,9 @@ import React from 'react';
 import { Banner } from './containers/Banner';
 import './style/style.scss';
 import { NavBar } from './components/NavBar';
-import { createMovieComponent } from './containers/pages/HOC';
-import { getMovies } from './redux/actions';
-import { API_URLS } from './utils/api-urls';
-
-const PopularMovies = createMovieComponent(
-  getMovies.bind(null, API_URLS.popularMovies)
-);
-
-const TopRatedMovies = createMovieComponent(
-  getMovies.bind(null, API_URLS.topRated)
-);
-
-const UpcomingMovies = createMovieComponent(
-  getMovies.bind(null, API_URLS.upcoming)
-);
+import PopularMovies from './containers/pages/PopularMovies';
+import TopRatedMovies from './containers/pages/TopRatedMovies';
+import UpcomingMovies from './containers/pages/UpcomingMovies';
 
 export const Root = ({ store }: any) => (
   <Provider store={store}>

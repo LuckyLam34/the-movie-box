@@ -1,12 +1,14 @@
 import { ACTION_NAMES } from '../../constants/action-names';
-import { fetchMovies, fetchMovieGenres } from '../../utils/http-request';
+import { fetchMovies, fetchMovieGenres } from '../../utils/http-requests';
 import { convertArrToObj, mergeMovieGenre } from '../../utils/common';
 
 export const getMovies = (url: string) => {
   return (dispatch: any, getState: any) => {
     dispatch(loading(true));
 
-    const { genres } = getState();
+    const { genres, currentPage } = getState();
+    url = url.replace('$pageNum', currentPage + 1);
+    dispatch(setCurentPage(currentPage + 1));
 
     fetchMovies(url)
       .then((res) => {
@@ -50,5 +52,10 @@ export const receiveGenres = (data: any) => ({
 
 export const receiveMovies = (data: any) => ({
   type: ACTION_NAMES.RECEIVE_MOVIES,
+  data,
+});
+
+export const setCurentPage = (data: number) => ({
+  type: ACTION_NAMES.SET_CURRENT_PAGE,
   data,
 });

@@ -6,8 +6,6 @@ function httpGetRequest(url: string): Promise<any> {
 }
 
 export function fetchMovies(url: string) {
-  url = url.replace('$pageNum', '1');
-
   return httpGetRequest(url);
 }
 
