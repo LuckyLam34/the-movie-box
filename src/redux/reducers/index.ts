@@ -51,10 +51,7 @@ const reducers = (state: IState = defaultState, action: any) => {
       return {
         ...state,
         selectedGenre: action.data,
-        movies: filterMoviesWithSelectedGenre(
-          state.selectedGenre,
-          state.movies
-        ),
+        movies: filterMoviesWithSelectedGenre(action.data, state.movies),
       };
 
     default:

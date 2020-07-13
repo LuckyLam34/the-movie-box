@@ -42,4 +42,10 @@ section.header {
   .btn-link {
     color: $whiteHeader;
   }
+
+  @media (max-width: 991.98px) {
+    .form-inline {
+      justify-content: flex-end;
+    }
+  }
 }

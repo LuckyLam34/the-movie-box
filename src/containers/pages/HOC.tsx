@@ -31,7 +31,6 @@ export const createMovieComponent = (
       this.props.getMovieGenres().then(() => {
         this.props.getMovies();
         this.hasMore = true;
-        console.log('set');
       });
     }
 

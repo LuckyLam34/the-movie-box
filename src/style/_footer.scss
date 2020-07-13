@@ -1,0 +1,29 @@
+$bgColor: #fff;
+$brandTextColor: rgb(46, 46, 60);
+$greyTextRightCorner: rgb(128, 128, 138);
+$greyBottomText: rgb(215, 215, 218);
+$borderColor: rgb(246, 246, 248);
+
+section.footer {
+  background-color: $bgColor;
+
+  .top > div:first-child {
+    color: $brandTextColor;
+  }
+
+  .top > div:not(first-child) > a {
+    color: $greyTextRightCorner;
+  }
+
+  .bottom > div:first-child {
+    color: $greyBottomText;
+  }
+
+  img {
+    width: 20px;
+  }
+
+  hr {
+    border-color: $borderColor;
+  }
+}
