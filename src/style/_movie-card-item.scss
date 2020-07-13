@@ -3,6 +3,8 @@ $bottomText: rgb(64, 64, 93);
 
 section.movie-card-item {
   max-width: 100%;
+  filter: drop-shadow(2px 4px 4px #dfdfdf);
+
   .card > div > img + span {
     position: absolute;
     z-index: 1;

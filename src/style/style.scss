@@ -6,13 +6,17 @@
 @import './rating';
 @import './navbar';
 @import './movie-card-item';
+@import './loader';
 @import './global';
+
+$bodyBgColor: #f8f8f8;
 
 body {
   margin: 0;
   font-family: Helvetica, sans-serif, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $bodyBgColor;
 }
 
 code {

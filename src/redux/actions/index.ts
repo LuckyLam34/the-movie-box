@@ -1,4 +1,4 @@
-import { ACTION_NAMES } from '../../constants/action-names';
+import { ACTION_TYPES } from '../../constants/action-types';
 import { fetchMovies, fetchMovieGenres } from '../../utils/http-requests';
 import { convertArrToObj, mergeMovieGenre } from '../../utils/common';
 
@@ -31,31 +31,43 @@ export const getMovieGenres = () => {
       }
 
       dispatch(loading(true));
+
       const res = await fetchMovieGenres();
-      const genreObj = convertArrToObj(res.data.genres);
+      const genresObj = convertArrToObj(res.data.genres);
+
       dispatch(loading(false));
-      dispatch(receiveGenres(genreObj));
+      dispatch(receiveGenres({ genresObj, genresArr: res.data.genres }));
+
       resolve();
     });
   };
 };
 
 export const loading = (val: boolean) => ({
-  type: ACTION_NAMES.LOADING,
+  type: ACTION_TYPES.LOADING,
   data: val,
 });
 
 export const receiveGenres = (data: any) => ({
-  type: ACTION_NAMES.RECEIVE_GENRES,
+  type: ACTION_TYPES.RECEIVE_GENRES,
   data,
 });
 
 export const receiveMovies = (data: any) => ({
-  type: ACTION_NAMES.RECEIVE_MOVIES,
+  type: ACTION_TYPES.RECEIVE_MOVIES,
   data,
 });
 
 export const setCurentPage = (data: number) => ({
-  type: ACTION_NAMES.SET_CURRENT_PAGE,
+  type: ACTION_TYPES.SET_CURRENT_PAGE,
   data,
+});
+
+export const resetMovies = () => ({
+  type: ACTION_TYPES.RESET_MOVIES,
+});
+
+export const setSelectedGenre = (id: number) => ({
+  type: ACTION_TYPES.SET_SELECTED_GENRE,
+  data: id,
 });

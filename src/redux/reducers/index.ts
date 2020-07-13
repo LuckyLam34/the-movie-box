@@ -1,37 +1,60 @@
 import { IState } from '../interfaces';
-import { ACTION_NAMES } from '../../constants/action-names';
+import { ACTION_TYPES } from '../../constants/action-types';
+import { filterMoviesWithSelectedGenre } from './../../utils/common';
 
 const defaultState: IState = {
   loading: false,
   genres: {},
   movies: [],
   currentPage: 0,
+  selectedGenre: -1,
+  genresArr: [],
 };
 
 const reducers = (state: IState = defaultState, action: any) => {
   switch (action.type) {
-    case ACTION_NAMES.LOADING:
+    case ACTION_TYPES.LOADING:
       return {
         ...state,
         loading: action.data,
       };
 
-    case ACTION_NAMES.RECEIVE_GENRES:
+    case ACTION_TYPES.RECEIVE_GENRES:
       return {
         ...state,
-        genres: action.data,
+        genres: action.data.genresObj,
+        genresArr: action.data.genresArr,
       };
 
-    case ACTION_NAMES.RECEIVE_MOVIES:
+    case ACTION_TYPES.RECEIVE_MOVIES:
       return {
         ...state,
-        movies: [...state.movies, ...action.data],
+        movies: filterMoviesWithSelectedGenre(state.selectedGenre, [
+          ...state.movies,
+          ...action.data,
+        ]),
       };
 
-    case ACTION_NAMES.SET_CURRENT_PAGE:
+    case ACTION_TYPES.SET_CURRENT_PAGE:
       return {
         ...state,
         currentPage: action.data,
+      };
+
+    case ACTION_TYPES.RESET_MOVIES:
+      return {
+        ...state,
+        movies: [],
+      };
+
+    case ACTION_TYPES.SET_SELECTED_GENRE:
+      return {
+        ...state,
+        selectedGenre: action.data,
+        movies: filterMoviesWithSelectedGenre(
+          state.selectedGenre,
+          state.movies
+        ),
       };
 
     default:

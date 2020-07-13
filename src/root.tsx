@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Banner } from './containers/Banner';
 import './style/style.scss';
-import { NavBar } from './components/NavBar';
 import PopularMovies from './containers/pages/PopularMovies';
 import TopRatedMovies from './containers/pages/TopRatedMovies';
 import UpcomingMovies from './containers/pages/UpcomingMovies';
+import NavBar from './components/NavBar';
 
 export const Root = ({ store }: any) => (
   <Provider store={store}>

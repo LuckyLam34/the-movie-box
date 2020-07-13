@@ -23,8 +23,42 @@ section.navbar {
     }
 
     & + hr {
-      margin-top: 5px;
+      margin-top: 6px;
       width: 100%;
+    }
+  }
+
+  li.custom-dropdown {
+    button.btn-link {
+      text-decoration: none;
+      cursor: initial;
+      color: $greyText;
+
+      & + button {
+        position: absolute;
+        height: 33px;
+        width: 130px;
+        right: -56px;
+        top: -4px;
+
+        &:after {
+          position: absolute;
+          right: 44px;
+          top: 13px;
+        }
+      }
+
+      & + button,
+      + button:active {
+        border: none;
+        background-color: transparent;
+        color: $greyText;
+
+        &:focus,
+        &:active {
+          box-shadow: none;
+        }
+      }
     }
   }
 }

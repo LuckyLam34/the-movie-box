@@ -1,3 +1,7 @@
 button.btn {
   font-size: 14px;
 }
+
+.btn-link:focus {
+  box-shadow: none;
+}
