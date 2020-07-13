@@ -12,7 +12,7 @@ export function fetchMovies(url: string) {
 }
 
 export function fetchMovieGenres() {
-  const url = API_URLS.genres.replace('$pageNum', '1');
+  const url = API_URLS.movieGenres.replace('$pageNum', '1');
 
   return httpGetRequest(url);
 }

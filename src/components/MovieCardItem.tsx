@@ -1,4 +1,5 @@
 import React from 'react';
+import { spawn } from 'child_process';
 
 export const MovieCardItem = ({ movie }: any) => (
   <section className="movie-card-item my-3">
@@ -13,7 +14,11 @@ export const MovieCardItem = ({ movie }: any) => (
       </div>
       <div className="card-body p-3">
         <h5 className="card-title mb-0">{movie.title}</h5>
-        <span>{movie.genres.join(', ')}</span>
+        {movie.genres.length > 0 ? (
+          <span>{movie.genres.join(', ')}</span>
+        ) : (
+          <span>&nbsp;</span>
+        )}
         <span className="badge badge-genre">{movie.vote_average}</span>
       </div>
     </div>

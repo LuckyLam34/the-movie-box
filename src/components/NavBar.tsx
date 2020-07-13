@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export const NavBar = () => (
-  <section className="navbar container mt-4">
+  <section className="navbar container mt-4 pb-0">
     <ul className="nav">
       <li className="nav-item">
         <NavLink to="/" exact activeClassName="active">
@@ -21,14 +21,9 @@ export const NavBar = () => (
         </NavLink>
       </li>
       <li className="nav-item">
-        <NavDropdown title="Dropdown" id="nav-dropdown">
-          <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3">
-            Something else here
-          </NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+        <NavDropdown title="Genre" id="nav-dropdown">
+          <NavDropdown.Item eventKey="4.1">Movie List</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2">TV List</NavDropdown.Item>
         </NavDropdown>
       </li>
     </ul>

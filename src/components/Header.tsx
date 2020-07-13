@@ -8,7 +8,7 @@ export const Header = () => {
     <section className="header">
       <div className="container">
         <Navbar expand="lg">
-          <Navbar.Brand href="#home">THEMOVIEBOX</Navbar.Brand>
+          <Navbar.Brand href="/">THEMOVIEBOX</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <div className="mr-auto"></div>

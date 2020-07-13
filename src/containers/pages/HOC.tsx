@@ -11,7 +11,7 @@ export const createMovieComponent = (getMovies: any) => {
       super(props);
     }
 
-    componentWillMount() {
+    componentDidMount() {
       this.props.getMovieGenres().then(() => {
         this.props.getMovies();
       });

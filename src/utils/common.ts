@@ -8,7 +8,7 @@ export function convertArrToObj(arr: any[], objKeyName = 'id') {
   return obj;
 }
 
-export function mergeMovieGenre(moviesArr: any[], genreObj: any) {
+export function mergeMovieGenre(moviesArr: any[] = [], genreObj: any) {
   return moviesArr.map((movieItem: any) => {
     let genres = movieItem.genre_ids;
 
