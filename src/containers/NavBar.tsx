@@ -3,10 +3,17 @@ import { NavLink } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { connect } from 'react-redux';
-import { IState } from './../redux/interfaces';
-import { getMovieGenres, setSelectedGenre } from '../redux/actions';
+import { IState } from '../redux/interfaces';
+import { setSelectedGenre } from '../redux/actions';
 
-class NavBar extends React.Component<any, any> {
+interface ILocalProps {
+  setSelectedGenre: any;
+  genresArr: any[];
+  genres: any;
+  selectedGenre: number;
+}
+
+class NavBar extends React.Component<ILocalProps, any> {
   render() {
     return (
       <section className="navbar container mt-4 pb-0">
@@ -67,6 +74,7 @@ const mapDispatchToProps = (dispatch: any) => ({
   setSelectedGenre: (selectedGenre: number) =>
     dispatch(setSelectedGenre(selectedGenre)),
 });
+
 const mapStateToProps = (state: IState) => {
   const { genresArr, genres, selectedGenre } = state;
 

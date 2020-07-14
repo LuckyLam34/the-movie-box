@@ -7,7 +7,8 @@ import './style/style.scss';
 import PopularMovies from './containers/pages/PopularMovies';
 import TopRatedMovies from './containers/pages/TopRatedMovies';
 import UpcomingMovies from './containers/pages/UpcomingMovies';
-import NavBar from './components/NavBar';
+import NavBar from './containers/NavBar';
+import { Footer } from './components/Footer';
 
 export const Root = ({ store }: any) => (
   <Provider store={store}>
@@ -19,6 +20,7 @@ export const Root = ({ store }: any) => (
         <Route path="/pages/top-rated" exact component={TopRatedMovies} />
         <Route path="/pages/upcoming" exact component={UpcomingMovies} />
       </Switch>
+      <Route path="/" component={Footer} />
     </Router>
   </Provider>
 );
