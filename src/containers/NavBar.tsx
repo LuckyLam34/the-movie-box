@@ -35,11 +35,7 @@ class NavBar extends React.Component<ILocalProps, any> {
           </li>
           <li className="nav-item custom-dropdown">
             <Dropdown as={ButtonGroup}>
-              <button
-                style={{ fontSize: '16px' }}
-                type="button"
-                className="btn btn-link pt-0 pr-0"
-              >
+              <button type="button" className="btn btn-link pt-0 pr-0">
                 {this.props.genres[this.props.selectedGenre]
                   ? this.props.genres[this.props.selectedGenre].name
                   : 'All Genres'}

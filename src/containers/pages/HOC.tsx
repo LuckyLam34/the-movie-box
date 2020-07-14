@@ -6,12 +6,21 @@ import { IState } from '../../redux/interfaces';
 import { connect } from 'react-redux';
 import InfiniteScroll from 'react-infinite-scroller';
 
+interface ILocalProps {
+  getMovies: any;
+  getMovieGenres: any;
+  setCurrentPage: any;
+  resetMovies: any;
+  loading: boolean;
+  movies: any[];
+}
+
 export const createMovieComponent = (
   getMovies: any,
   setCurrentPage?: any,
   resetMovies?: any
 ) => {
-  class HOC extends React.Component<any, any> {
+  class HOC extends React.Component<ILocalProps, any> {
     hasMore = false;
 
     constructor(props: any) {

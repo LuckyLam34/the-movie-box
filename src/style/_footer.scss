@@ -7,6 +7,11 @@ $borderColor: rgb(246, 246, 248);
 section.footer {
   background-color: $bgColor;
 
+  .top,
+  .bottom {
+    display: flex;
+  }
+
   .top > div:first-child {
     color: $brandTextColor;
   }
@@ -25,5 +30,11 @@ section.footer {
 
   hr {
     border-color: $borderColor;
+  }
+
+  @media (max-width: 414px) {
+    .top {
+      display: inherit;
+    }
   }
 }

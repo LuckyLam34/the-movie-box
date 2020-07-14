@@ -60,5 +60,31 @@ section.navbar {
         }
       }
     }
+
+    & > div > button:first-child {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 416px) {
+    .nav-item,
+    .custom-dropdown > div > button:first-child {
+      font-size: 14px !important;
+    }
+  }
+
+  @media (max-width: 382px) {
+    .nav {
+      display: initial;
+      li {
+        padding-bottom: 1em;
+      }
+
+      .active {
+        border-bottom: none !important;
+      }
+    }
+
+    justify-content: center;
   }
 }

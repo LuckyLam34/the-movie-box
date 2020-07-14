@@ -3,7 +3,7 @@ import React from 'react';
 export const Footer = () => (
   <section className="footer pt-3 pb-5">
     <div className="container">
-      <div className="d-flex bd-highlight top">
+      <div className=" bd-highlight top">
         <div className="py-2 pr-2 pl-0 flex-grow-1 bd-highlight">
           THEMOVIEBOX
         </div>
@@ -21,7 +21,7 @@ export const Footer = () => (
         </div>
       </div>
       <hr className="mb-1" />
-      <div className="d-flex bd-highlight bottom">
+      <div className=" bd-highlight bottom">
         <div className="py-2 pl-0 pr-2 flex-grow-1 bd-highlight">
           Designed by Milan Houter. All rights reserved.
         </div>
