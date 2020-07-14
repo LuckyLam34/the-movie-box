@@ -7,8 +7,8 @@ import './style/style.scss';
 import PopularMovies from './containers/pages/PopularMovies';
 import TopRatedMovies from './containers/pages/TopRatedMovies';
 import UpcomingMovies from './containers/pages/UpcomingMovies';
-import NavBar from './components/NavBar';
-import { Footer } from './containers/Footer';
+import NavBar from './containers/NavBar';
+import { Footer } from './components/Footer';
 
 export const Root = ({ store }: any) => (
   <Provider store={store}>

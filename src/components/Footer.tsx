@@ -8,16 +8,16 @@ export const Footer = () => (
           THEMOVIEBOX
         </div>
         <div className="p-2 bd-highlight">
-          <a href="">About</a>
+          <a href="/">About</a>
         </div>
         <div className="p-2 bd-highlight">
-          <a href="">Movies</a>
+          <a href="/">Movies</a>
         </div>
         <div className="p-2 bd-highlight">
-          <a href="">Ratings</a>
+          <a href="/">Ratings</a>
         </div>
         <div className="py-2 pl-2 pr-0 bd-highlight">
-          <a href="">Contact</a>
+          <a href="/">Contact</a>
         </div>
       </div>
       <hr className="mb-1" />
@@ -26,22 +26,22 @@ export const Footer = () => (
           Designed by Milan Houter. All rights reserved.
         </div>
         <div className="p-2 bd-highlight">
-          <a href="">
+          <a href="/">
             <img src="/assets/images/fa-icon.png" alt="facebook" />
           </a>
         </div>
         <div className="p-2 bd-highlight">
-          <a href="">
+          <a href="/">
             <img src="/assets/images/in-icon.png" alt="instagram" />
           </a>
         </div>
         <div className="p-2 bd-highlight">
-          <a href="">
+          <a href="/">
             <img src="/assets/images/tw-icon.png" alt="twitter" />
           </a>
         </div>
         <div className="py-2 pl-2 pr-0 bd-highlight">
-          <a href="">
+          <a href="/">
             <img src="/assets/images/pin-icon.png" alt="pin" />
           </a>
         </div>

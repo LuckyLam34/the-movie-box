@@ -1,5 +1,5 @@
 import React from 'react';
-import { spawn } from 'child_process';
+import PropTypes from 'prop-types';
 
 export const MovieCardItem = ({ movie }: any) => (
   <section className="movie-card-item my-3">
@@ -21,7 +21,7 @@ export const MovieCardItem = ({ movie }: any) => (
       <div className="card-body p-3">
         <h5 className="card-title mb-0">{movie.title}</h5>
         {movie.genres && movie.genres.length > 0 ? (
-          <span>{movie.genres.join(', ')}</span>
+          <span className="movie-genre">{movie.genres.join(', ')}</span>
         ) : (
           <span>&nbsp;</span>
         )}
@@ -30,3 +30,7 @@ export const MovieCardItem = ({ movie }: any) => (
     </div>
   </section>
 );
+
+MovieCardItem.propTypes = {
+  movie: PropTypes.object.isRequired,
+};

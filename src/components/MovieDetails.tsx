@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rating } from './Rating';
+import PropTypes from 'prop-types';
 
 export const MovieDetails = ({ details }: any) => (
   <div className="movie-details">
@@ -27,3 +28,7 @@ export const MovieDetails = ({ details }: any) => (
     />
   </div>
 );
+
+MovieDetails.propTypes = {
+  details: PropTypes.object.isRequired,
+};
