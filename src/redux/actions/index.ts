@@ -8,6 +8,7 @@ export const getMovies = (url: string) => {
 
     const { genres, currentPage } = getState();
     url = url.replace('$pageNum', currentPage + 1);
+
     dispatch(setCurentPage(currentPage + 1));
 
     fetchMovies(url)
