@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 export const MovieCardItem = ({ movie }: any) => (
   <section className="movie-card-item my-3">
@@ -19,9 +21,25 @@ export const MovieCardItem = ({ movie }: any) => (
         ) : null}
       </div>
       <div className="card-body p-3">
-        <h5 className="card-title mb-0">{movie.title}</h5>
+        <OverlayTrigger
+          key={movie.id}
+          placement="top"
+          overlay={<Tooltip id={`tooltip-${movie.id}`}>{movie.title}</Tooltip>}
+        >
+          <h5 className="card-title mb-0">{movie.title}</h5>
+        </OverlayTrigger>
         {movie.genres && movie.genres.length > 0 ? (
-          <span className="movie-genre">{movie.genres.join(', ')}</span>
+          <OverlayTrigger
+            key={movie.genres.join(', ')}
+            placement="top"
+            overlay={
+              <Tooltip id={`tooltip-${movie.genres.join(', ')}`}>
+                {movie.genres.join(', ')}
+              </Tooltip>
+            }
+          >
+            <span className="movie-genre">{movie.genres.join(', ')}</span>
+          </OverlayTrigger>
         ) : (
           <span>&nbsp;</span>
         )}
